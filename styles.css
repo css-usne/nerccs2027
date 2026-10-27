@@ -1,0 +1,1047 @@
+/* ============================================
+   Womplexity Meets Northeast - Stylesheet
+   ============================================ */
+
+:root {
+    --primary-red: #a61c1c;
+    --dark-maroon: #6b0000;
+    --light-gray: #f5f5f5;
+    --dark-gray: #333;
+    --text-color: #333;
+    --border-color: #ddd;
+    --accent-gold: #d4af37;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 2px solid var(--primary-red);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-red);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-red);
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.hero {
+    /* background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-maroon) 100%); */
+    background: url('Satellite_logo_1.png') center / cover no-repeat;  /* logo as the hero background, scaled to fill and centered */
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="1200" height="500" fill="url(%23grid)" /></svg>');
+    opacity: 0;   /* hide the faint grid so the logo shows cleanly */
+}
+
+.hero-content {
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    background: #ffffff;                          /* the white box */
+    color: var(--primary-red);                    /* red letters, matching the map and the rest of the site */
+    padding: 40px 50px;                           /* space inside the box around the text */
+    border-radius: 12px;                          /* soft rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);  /* shadow so the box lifts off the white parts of the logo */
+}
+
+.hero-content .tagline,
+.hero-content .subtitle {
+    opacity: 1;   /* full-strength red on the white box */
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+/* ============================================
+   About Section
+   ============================================ */
+
+.about {
+    padding: 80px 20px;
+    background-color: var(--light-gray);
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: var(--primary-red);
+}
+
+.about-content {
+    margin-bottom: 60px;
+}
+
+.about-text h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--dark-maroon);
+}
+
+.about-text p {
+    font-size: 1.05em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.about-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.info-box {
+    background-color: white;
+    padding: 30px;
+    border-left: 5px solid var(--primary-red);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 4px;
+}
+
+.info-box h4 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: var(--primary-red);
+}
+
+.info-box p {
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+.abstract {
+    background-color: white;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.abstract h3 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: var(--dark-maroon);
+}
+
+.abstract p {
+    font-size: 1.05em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ============================================
+   Schedule Section
+   ============================================ */
+
+.schedule {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.schedule h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: var(--primary-red);
+}
+
+.schedule-note {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.schedule-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.schedule-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 30px;
+    padding: 25px;
+    margin-bottom: 15px;
+    background-color: var(--light-gray);
+    border-left: 5px solid var(--primary-red);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.schedule-item:hover {
+    background-color: #f0f0f0;
+}
+
+.schedule-item.break {
+    border-left-color: #999;
+    background-color: #e8e8e8;
+}
+
+.schedule-item.panel {
+    border-left-color: var(--accent-gold);
+    background-color: #fffaf0;
+}
+
+.schedule-item .time {
+    font-weight: 700;
+    color: var(--primary-red);
+    font-size: 0.95em;
+}
+
+.schedule-item h4 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: var(--dark-maroon);
+}
+
+.schedule-item p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.panel-detail {
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* ============================================
+   Call for Abstracts Section
+   ============================================ */
+
+.call-for-abstracts {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+}
+
+.call-for-abstracts h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: var(--primary-red);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.cfa-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cfa-content p {
+    font-size: 1.05em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.cfa-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-maroon) 100%);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* ============================================
+   Speakers Section
+   ============================================ */
+
+.speakers {
+    padding: 80px 20px;
+    background-color: var(--light-gray);
+}
+
+.speakers h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: var(--primary-red);
+}
+
+.section-note {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.speaker-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.speaker-placeholder {
+    background: linear-gradient(135deg, #e8e8e8 0%, #d0d0d0 100%);
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.speaker-card h4 {
+    padding: 20px 20px 10px;
+    font-size: 1.3em;
+    color: var(--primary-red);
+}
+
+.speaker-role {
+    padding: 0 20px 20px;
+    font-size: 0.95em;
+    color: #666;
+    font-style: italic;
+}
+
+.speakers-note {
+    background-color: white;
+    padding: 30px;
+    border-left: 5px solid var(--primary-red);
+    border-radius: 4px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.speakers-note p {
+    font-size: 0.95em;
+    line-height: 1.8;
+}
+
+/* ============================================
+   Contact Section (Get Involved)
+   ============================================ */
+
+.contact {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-maroon) 100%);
+    color: white;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-box {
+    background-color: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.contact-box h3 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.contact-box h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.contact-box h4:first-child {
+    margin-top: 0;
+}
+
+.contact-box p {
+    font-size: 1em;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.contact-box a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.contact-box a:hover {
+    opacity: 0.8;
+}
+
+/* Communities Info Styling */
+
+.communities-info {
+    display: grid;
+    gap: 25px;
+}
+
+.community-item {
+    background-color: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-gold);
+}
+
+.community-item h4 {
+    color: var(--accent-gold);
+}
+
+.community-item p {
+    font-size: 0.95em;
+}
+
+.qr-code-container {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.qr-code-img {
+    max-width: 200px !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 4px;
+    background-color: white;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.qr-code-container p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.footer {
+    background-color: var(--dark-maroon);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+        font-size: 0.9em;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .tagline {
+        font-size: 1.3em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .about h2, .schedule h2, .speakers h2, .call-for-abstracts h2, .contact h2 {
+        font-size: 2em;
+    }
+
+    .about-boxes, .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-item {
+        grid-template-columns: 120px 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .speakers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .qr-code-img {
+        max-width: 150px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .nav-links a {
+        padding: 8px 0;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .tagline {
+        font-size: 1.1em;
+    }
+
+    .subtitle {
+        font-size: 0.95em;
+    }
+
+    .about, .schedule, .speakers, .call-for-abstracts, .contact {
+        padding: 40px 20px;
+    }
+
+    .schedule-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .speakers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .qr-code-img {
+        max-width: 120px !important;
+    }
+}
+
+
+/* Featured (confirmed) speaker announcement */
+.featured-speaker {
+    display: flex;                          /* photo and text side by side */
+    gap: 30px;
+    align-items: flex-start;
+    background-color: white;
+    border-left: 5px solid var(--primary-red);   /* same accent as the info boxes */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;   /* smooth lift on hover, like the TBA cards */
+    max-width: 900px;
+    margin: 0 auto 50px auto;               /* centered, with space before the grid below */
+}
+.featured-speaker:hover {
+    transform: translateY(-5px);                 /* same gentle rise the placeholder cards use */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);  /* slightly stronger shadow while hovered */
+}
+
+.featured-photo {
+    width: 180px !important;                /* fixed photo size */
+    height: 180px !important;               /* square */
+    max-width: 180px !important;            /* beat any inherited image cap */
+    object-fit: cover;                      /* fill the square neatly whatever the original shape */
+    border-radius: 8px;
+    border: 4px solid var(--light-gray);   /* soft frame so the photo looks intentional */
+    flex-shrink: 0;                         /* stop the photo from being squeezed */
+}
+
+.featured-info h4 {
+    font-size: 1.4em;
+    color: var(--primary-red);
+    margin-bottom: 5px;
+}
+
+.featured-role {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.featured-bio {
+    font-size: 1em;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+/* On narrow screens, stack the photo above the text */
+@media (max-width: 600px) {
+    .featured-speaker {
+        flex-direction: column;
+    }
+    .featured-photo {
+        align-self: center;
+    }
+}
+
+
+/* Follow row in the Get in Touch card */
+.follow-label {
+    margin-top: 20px;            /* space above the icon row */
+    margin-bottom: 12px;
+}
+
+.social-links {
+    display: flex;               /* the icons sit in a row */
+    gap: 15px;                   /* space between them */
+}
+
+.social-links a {
+    display: inline-flex;        /* center the icon inside the circle */
+    align-items: center;
+    justify-content: center;
+    width: 44px;                 /* round button size */
+    height: 44px;
+    border-radius: 50%;          /* makes each one a circle */
+    background-color: rgba(255, 255, 255, 0.12);  /* soft circle on the dark background */
+    color: white;                /* icon color */
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--accent-gold);   /* gold fill on hover, matching the site accent */
+    color: var(--dark-maroon);              /* dark icon on the gold */
+    transform: translateY(-3px);            /* small lift, like the other cards */
+    opacity: 1;                             /* keep the gold crisp, not faded */
+}
+
+
+/* Big call-to-action button inside the hero box */
+.hero-content .button {
+    margin-top: 25px;   /* space between the date and the button */
+    font-size: 1.1em;   /* a little larger so it stands out */
+}
+
+/* Compact "Submit" button in the top navigation bar */
+.nav-links a.nav-cta {
+    background-color: var(--primary-red);
+    color: white;               /* white text on the red pill */
+    padding: 8px 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a.nav-cta:hover {
+    background-color: var(--dark-maroon);   /* darken on hover, rather than the usual link color change */
+    color: white;
+}
+
+/* When a nav link jumps to a section, keep the sticky navbar from covering its heading */
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+/* Amanda's real photo, sized to match the placeholder cards */
+.speaker-photo {
+    width: 100%;
+    height: 240px;         /* same height as the gray placeholders */
+    object-fit: cover;     /* fill the area neatly, cropping if needed */
+    object-position: center 30%;   /* bias the crop toward the top so the head is not cut */
+    display: block;
+}
+
+/* Let each card keep its natural height so an opened bio grows on its own */
+.speakers-grid {
+    align-items: start;
+}
+
+/* The unfolding bio inside Amanda's card */
+/* Bio toggle: role on the left, "Read bio" on the right, same line */
+.bio-toggle {
+    padding: 0;   /* padding now lives on the summary line and the bio text */
+}
+
+.bio-toggle summary {
+    display: flex;                    /* Panelist and Read bio share one row */
+    justify-content: space-between;   /* push them to opposite ends */
+    align-items: baseline;
+    padding: 0 20px 20px;             /* matches the placeholder cards' role line */
+    cursor: pointer;
+    list-style: none;                 /* hide the default triangle */
+}
+
+.bio-toggle summary::-webkit-details-marker {
+    display: none;                    /* hide the triangle in Safari */
+}
+
+.role-label {
+    font-size: 0.95em;
+    font-style: italic;
+    color: #666;                      /* same look as the other cards' role text */
+}
+
+.bio-link {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: var(--primary-red);        /* the red toggle, sitting on the right */
+}
+
+.bio-toggle summary:hover .bio-link {
+    text-decoration: underline;
+}
+
+.bio-toggle p {
+    margin: 0;
+    padding: 0 20px 20px;             /* bio text, full width below, matching sides */
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: var(--text-color);
+    text-align: left;
+}
+
+
+/* Nudge only Cigdem's crop upward so her chin is not cut */
+.cigdem-photo {
+    object-position: center 55%;   /* lower number shows more of the bottom of the face */
+}
+
+
+/* ============================================
+   Schedule: session types (one color per type, shared by the left bar and the type label)
+   ============================================ */
+
+/* Type label ("Invited Talk", "Contributed Talk"). The selector .schedule-item p.talk-type
+   is more specific than .schedule-item p, which silently overrode the old .talk-type rule.
+   Labels on items without a type class keep the gray from .schedule-item p. */
+.schedule-item p.talk-type {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+/* Invited talks: the site's red (same as the default bar, written out so each type is explicit) */
+.schedule-item.invited {
+    border-left-color: var(--primary-red);
+}
+
+.schedule-item.invited p.talk-type {
+    color: var(--primary-red);
+}
+
+/* Contributed talks: muted plum */
+.schedule-item.contributed {
+    border-left-color: #8b5a8c;
+}
+
+.schedule-item.contributed p.talk-type {
+    color: #8b5a8c;
+}
+
+/* CSS chapter segment: same gold look as the panel, since both are community segments */
+.schedule-item.chapter {
+    border-left-color: var(--accent-gold);
+    background-color: #fffaf0;
+}
+
+/* Closing remarks: neutral gray bar, so they are not mistaken for an invited talk */
+.schedule-item.closing {
+    border-left-color: #bbb;
+}
+
+
+
+/* ============================================
+   Schedule: compact layout
+   These rules override the spacing set in the Schedule Section and in the
+   768px media query above, so change the schedule spacing here from now on.
+   ============================================ */
+
+/* Narrow time column, small gap, tighter padding and less space between cards */
+.schedule-item {
+    grid-template-columns: 64px 1fr;
+    gap: 16px;
+    padding: 14px 20px;
+    margin-bottom: 8px;
+}
+
+/* Name: slightly smaller, with almost no space before the type label */
+.schedule-item h4 {
+    font-size: 1.1em;
+    margin-bottom: 2px;
+}
+
+/* Talk titles: tighter line spacing, noticeable on two-line titles */
+.schedule-item p {
+    line-height: 1.45;
+}
+
+/* Type label: less space above and below */
+.schedule-item p.talk-type {
+    margin: 2px 0;
+}
+
+/* Phones: time above the content, as the 480px rule above did, now with a smaller gap */
+@media (max-width: 480px) {
+    .schedule-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+}
+
+
+/* ============================================
+   Section spacing: less empty space between sections
+   These rules override the 80px section padding and the large title margins
+   set in the sections above, so change the section spacing here from now on.
+   ============================================ */
+
+/* Space above and below the content of every section (was 80px) */
+.about, .schedule, .call-for-abstracts, .speakers, .contact {
+    padding: 48px 20px;
+}
+
+/* Space between each section's title block and its content (was 40 to 50px).
+   Kept smaller than the section padding, so each title stays visually attached to its own section */
+.about h2,
+.schedule-note,
+.section-subtitle,
+.contact h2 {
+    margin-bottom: 30px;
+}
+
+/* About: in the HTML, the "About the Satellite" box sits inside .about-content,
+   so the 60px margin meant to separate it from the two boxes above ended up below it.
+   This removes the space below and puts a 30px gap above it, like the gap between the two boxes */
+.about-content {
+    margin-bottom: 0;
+}
+
+.abstract {
+    margin-top: 30px;
+}
+
+/* Speakers: the grid is the last thing in its section, so its bottom margin only added empty space */
+.speakers-grid {
+    margin-bottom: 0;
+}
+
+/* Schedule: no extra space after the last item, so every gap between sections is the same */
+.schedule-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Phones: tighter than the 40px set by the 480px rule above */
+@media (max-width: 480px) {
+    .about, .schedule, .call-for-abstracts, .speakers, .contact {
+        padding: 32px 20px;
+    }
+}
+
+/* ---------- Speaker cards: three per row, styled by role (2026-10-15) ---------- */
+
+/* Always three cards per row on wide screens, so each planned row of three stays together */
+.speakers-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Lets the colored band sit on top of the photo */
+.speaker-card {
+    position: relative;
+}
+
+/* Colored band across the top of the card, drawn over the photo so every card in a row keeps the same height */
+.speaker-card.featured::before,
+.speaker-card.organizer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--accent-gold);
+    z-index: 1;
+}
+
+/* Invited speakers and panelists: gold band, thin gold frame, bold red role */
+.speaker-card.featured {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(212, 175, 55, 0.55);
+}
+.speaker-card.featured:hover {
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18), 0 0 0 2px rgba(212, 175, 55, 0.8);
+}
+.speaker-card.featured .role-label {
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.8em;
+    color: var(--primary-red);
+}
+
+/* Organizers and coordinators: the same plain card as the contributed talks, with a thinner gray band */
+.speaker-card.organizer::before {
+    height: 4px;
+    background: #9a9a9a;
+}
+
+/* Phones and narrow tablets: one card per row */
+@media (max-width: 768px) {
+    .speakers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Last two rows: two cards each, centered, the same card width as the three-across rows (2026-10-15) */
+.speakers-grid.pairs {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: calc((100% - 60px) * 2 / 3 + 30px);
+    margin: 30px auto 0;
+}
+@media (max-width: 768px) {
+    .speakers-grid.pairs {
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+}
