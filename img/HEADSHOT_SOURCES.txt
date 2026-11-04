@@ -1,0 +1,40 @@
+Organizing committee headshots for the NERCCS 2027 site.
+Each file is a square centre crop of the original, resized to 500x500.
+Amanda Perofsky and Mariah Boudreau both agreed to serve before being listed here.
+
+irene.jpg     Irene Ferri
+              via the chapter's own satellite site,
+              https://css-usne.github.io/womplexity-meets-northeast/irene_headshot.jpg
+
+amanda.jpg    Amanda Perofsky
+              via the chapter's own satellite site,
+              https://css-usne.github.io/womplexity-meets-northeast/perofsky_headshot.jpeg
+
+mariah.jpg    Mariah Boudreau
+              https://roux.northeastern.edu/wp-content/uploads/headshot-6.jpg
+              (page: https://roux.northeastern.edu/people/mariah-boudreau/)
+              Downloaded 2026-11-04.
+
+amahury.jpg   Amahury J. López Díaz
+              https://www.binghamton.edu/ssie/graduate/amahury_jafet_lopez_diaz.jpg
+              (page: https://www.binghamton.edu/ssie/graduate/ambassadors.html)
+              Downloaded 2026-10-15 for the chapter slides.
+
+aviral.jpg    Aviral Chawla
+              https://vermontcomplexsystems.org/common/assets/students/avi-chawla.jpg
+              (page: https://vermontcomplexsystems.org/community/students/)
+              Downloaded 2026-10-15 for the chapter slides.
+
+Venue and building photographs
+------------------------------
+amphitheater.jpg, kettle-cove.jpg, eastern-egg-rock.jpg
+              Photographs of the booked rooms, taken 2026-06-11 when the rooms were reserved.
+
+roux-building.jpg
+              The Roux Institute facade at sunset. Published by the Roux Institute itself,
+              including on its Breakthrough Maine 2026/2027 event-series banner. Permission
+              and the wording of a credit line have been requested from
+              rouxevents@northeastern.edu; add the credit to the venue section once they reply.
+
+css-logo.svg  Complex Systems Society logo, as used on the NERCCS 2026 site
+              (https://nerccs2026.github.io/img/logo.svg).
