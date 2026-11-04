@@ -43,6 +43,17 @@
             line-height: 1.4;
         }
 
+        /* Organizer headshots are square, face-centred crops. The shared stylesheet gives
+           .speaker-photo a fixed 240px height, so at card widths of 281 to 380px a square
+           image overflowed vertically and object-position: 50% 30% cut the chin off. A square
+           box displays them whole. Scoped to #organizers so the landscape venue photos keep
+           the original 240px treatment. */
+        #organizers .speaker-photo {
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-position: center;
+        }
+
         /* On a phone the section, the container and the white card each add 20 to 40px of
            side padding, which left only 215px of content on a 375px screen. Trim the card's
            own padding there so the text and the tiles get a usable width. */
