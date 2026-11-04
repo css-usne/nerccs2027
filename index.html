@@ -42,6 +42,13 @@
             font-size: 0.95em;
             line-height: 1.4;
         }
+
+        /* On a phone the section, the container and the white card each add 20 to 40px of
+           side padding, which left only 215px of content on a 375px screen. Trim the card's
+           own padding there so the text and the tiles get a usable width. */
+        @media (max-width: 480px) {
+            .cfa-content { padding: 28px 20px; }
+        }
     </style>
 </head>
 <body>
