@@ -19,6 +19,30 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+
+    <!-- NERCCS-only additions. styles.css is the shared chapter stylesheet and is kept
+         unchanged, so anything specific to this site lives here. -->
+    <style>
+        /* Conference topics as a reflowing grid of tiles rather than one long bullet list.
+           flex-basis sets the preferred column width; tiles drop to one per row on phones. */
+        .topic-grid {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .topic-grid li {
+            flex: 1 1 250px;
+            background-color: #faf7f7;
+            border-left: 3px solid var(--primary-red);
+            border-radius: 4px;
+            padding: 12px 16px;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+    </style>
 </head>
 <body>
 
@@ -92,7 +116,7 @@
 
             <div class="cfa-content">
                 <p>We invite submissions for presentations on a wide variety of complex systems research. Relevant topics include, but are not limited to:</p>
-                <ul>
+                <ul class="topic-grid">
                     <li>Theoretical foundations of complex systems</li>
                     <li>Nonlinear dynamics and chaos</li>
                     <li>Systems theory, information theory, and systems science</li>
