@@ -86,6 +86,23 @@
             object-position: center;
         }
 
+        /* Committee cards are narrower than speaker cards. The shared grid asks for a 280px
+           minimum, which gives three columns of about 380px, and a square photo in a 380px
+           card is far too big for an organizer. A 170px minimum puts all five on one row at
+           roughly 220px, so the photos shrink to match. Type is scaled down to suit. */
+        #organizers .speakers-grid {
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 20px;
+        }
+        #organizers .speaker-card h4 {
+            font-size: 1.02em;
+            padding: 14px 14px 4px;
+        }
+        #organizers .speaker-role {
+            padding: 0 14px 16px;
+            font-size: 0.86em;
+        }
+
         /* On a phone the section, the container and the white card each add 20 to 40px of
            side padding, which left only 215px of content on a 375px screen. Trim the card's
            own padding there so the text and the tiles get a usable width. */
