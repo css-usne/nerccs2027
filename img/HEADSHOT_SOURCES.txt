@@ -36,5 +36,16 @@ roux-building.jpg
               and the wording of a credit line have been requested from
               rouxevents@northeastern.edu; add the credit to the venue section once they reply.
 
+Logos
+-----
+chapter-logo.png
+              CSS US Northeast Chapter logo (society mark, Northeast map, wordmark). Local copy
+              of the logo used in the chapter's beamer slides and on the NERCCS 2027 flyer.
+
+roux-logo.png
+              The Roux Institute monogram, from the chapter's beamer slides.
+
 css-logo.svg  Complex Systems Society logo, as used on the NERCCS 2026 site
-              (https://nerccs2026.github.io/img/logo.svg).
+              (https://nerccs2026.github.io/img/logo.svg). No longer used on the page: the
+              chapter's own logo replaced it in the band under the hero. Kept in case the
+              parent society's mark is wanted later.
