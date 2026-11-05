@@ -80,27 +80,29 @@
            image overflowed vertically and object-position: 50% 30% cut the chin off. A square
            box displays them whole. Scoped to #organizers so the landscape venue photos keep
            the original 240px treatment. */
-        #organizers .speaker-photo {
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-position: center;
+        /* Organizing committee: a role-grouped list, roles on the left, people on the right,
+           stacking to one column on a phone. */
+        .committee {
+            max-width: 740px;
+            margin: 26px auto 0;
         }
-
-        /* Committee cards are narrower than speaker cards. The shared grid asks for a 280px
-           minimum, which gives three columns of about 380px, and a square photo in a 380px
-           card is far too big for an organizer. A 170px minimum puts all five on one row at
-           roughly 220px, so the photos shrink to match. Type is scaled down to suit. */
-        #organizers .speakers-grid {
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-            gap: 20px;
+        .committee > div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 20px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border-color);
         }
-        #organizers .speaker-card h4 {
-            font-size: 1.02em;
-            padding: 14px 14px 4px;
+        .committee > div:last-child { border-bottom: none; }
+        .committee dt {
+            flex: 0 0 240px;
+            font-weight: 600;
+            color: var(--primary-red);
         }
-        #organizers .speaker-role {
-            padding: 0 14px 16px;
-            font-size: 0.86em;
+        .committee dd {
+            flex: 1 1 300px;
+            margin: 0;
+            line-height: 1.7;
         }
 
         /* On a phone the section, the container and the white card each add 20 to 40px of
@@ -386,35 +388,31 @@
             <h2>Organizers</h2>
             <p class="section-subtitle">Complex Systems Society, U.S. Northeast Chapter</p>
 
-            <!-- Headshot sources are recorded in img/HEADSHOT_SOURCES.txt.
-                 src must match the file name exactly; GitHub Pages is case-sensitive. -->
-            <div class="speakers-grid">
-                <div class="speaker-card">
-                    <img src="img/irene.jpg" alt="Irene Ferri" class="speaker-photo">
-                    <h4>Irene Ferri</h4>
-                    <p class="speaker-role">General Chair and Program Chair</p>
+            <!-- A plain role-grouped list, as NERCCS 2026 and 2025 both used. The speakers are
+                 the protagonists of a conference, so photo cards are reserved for them; giving
+                 the committee that prominence inverts the hierarchy. The headshots are still in
+                 img/ with their sources in HEADSHOT_SOURCES.txt, should they be wanted again. -->
+            <dl class="committee">
+                <div>
+                    <dt>General Chair and Program Chair</dt>
+                    <dd>Irene Ferri</dd>
                 </div>
-                <div class="speaker-card">
-                    <img src="img/amanda.jpg" alt="Amanda Perofsky" class="speaker-photo">
-                    <h4>Amanda Perofsky</h4>
-                    <p class="speaker-role">Logistics Chair</p>
+                <div>
+                    <dt>Logistics Chairs</dt>
+                    <dd>
+                        Amanda Perofsky (Network Science Institute, Northeastern University)<br>
+                        Mariah Boudreau (Roux Institute, Northeastern University)
+                    </dd>
                 </div>
-                <div class="speaker-card">
-                    <img src="img/mariah.jpg" alt="Mariah Boudreau" class="speaker-photo">
-                    <h4>Mariah Boudreau</h4>
-                    <p class="speaker-role">Logistics Chair</p>
+                <div>
+                    <dt>Communications</dt>
+                    <dd>Amahury J. L&oacute;pez D&iacute;az (Binghamton University, SUNY)</dd>
                 </div>
-                <div class="speaker-card">
-                    <img src="img/amahury.jpg" alt="Amahury J. López Díaz" class="speaker-photo">
-                    <h4>Amahury J. L&oacute;pez D&iacute;az</h4>
-                    <p class="speaker-role">Communications</p>
+                <div>
+                    <dt>Web</dt>
+                    <dd>Aviral Chawla (University of Vermont)</dd>
                 </div>
-                <div class="speaker-card">
-                    <img src="img/aviral.jpg" alt="Aviral Chawla" class="speaker-photo">
-                    <h4>Aviral Chawla</h4>
-                    <p class="speaker-role">Web</p>
-                </div>
-            </div>
+            </dl>
         </div>
     </section>
 
