@@ -43,6 +43,38 @@
             line-height: 1.4;
         }
 
+        /* Band under the hero carrying the chapter and venue logos. High on the page, because
+           that is where a reader decides whether a conference is real. The two logos have very
+           different proportions (307x146 and 225x225), so they are sized by height, not width,
+           and the Roux square is given a slightly smaller height so the two look balanced. */
+        .org-band {
+            background-color: #fff;
+            padding: 26px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .org-band-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 20px 56px;
+        }
+        .org-band-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .org-band-item span {
+            font-size: 0.78em;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: #777;
+        }
+        .org-band-item img { display: block; width: auto; }
+        .org-band-item img.logo-chapter { height: 58px; }
+        .org-band-item img.logo-venue   { height: 66px; }
+
         /* Organizer headshots are square, face-centred crops. The shared stylesheet gives
            .speaker-photo a fixed 240px height, so at card widths of 281 to 380px a square
            image overflowed vertically and object-position: 50% 30% cut the chin off. A square
@@ -96,6 +128,26 @@
             <p class="subtitle">The Roux Institute at Northeastern University, Portland, Maine</p>
             <p class="subtitle">In person and online</p>
             <a href="#submissions" class="button">Call for Submissions</a>
+        </div>
+    </section>
+
+    <!-- ============ ORGANISED BY / HOSTED AT ============ -->
+    <section class="org-band">
+        <div class="container">
+            <div class="org-band-items">
+                <div class="org-band-item">
+                    <span>Organised by</span>
+                    <a href="https://cssociety.org/" target="_blank" rel="noopener">
+                        <img src="img/chapter-logo.png" class="logo-chapter" alt="Complex Systems Society, U.S. Northeast Chapter">
+                    </a>
+                </div>
+                <div class="org-band-item">
+                    <span>Hosted at</span>
+                    <a href="https://roux.northeastern.edu/" target="_blank" rel="noopener">
+                        <img src="img/roux-logo.png" class="logo-venue" alt="The Roux Institute at Northeastern University">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -356,14 +408,7 @@
             <h2>Sponsors</h2>
             <p class="section-subtitle">Supporting a decade of complex systems research in the Northeast</p>
             <div class="abstract">
-                <h3>Organized by</h3>
-                <p style="text-align:center; margin: 20px 0 28px;">
-                    <a href="https://cssociety.org/" target="_blank" rel="noopener">
-                        <img src="img/css-logo.svg" alt="Complex Systems Society" height="62">
-                    </a>
-                </p>
-                <p>NERCCS is the annual meeting of the U.S. Northeast Chapter of the Complex Systems Society.</p>
-                <h3 style="margin-top:28px;">Partner with NERCCS 2027</h3>
+                <h3>Partner with NERCCS 2027</h3>
                 <p>Sponsorship keeps registration affordable, brings keynote speakers to Portland, and funds student travel scholarships and presentation awards. Partnership levels run from $250 to $1,500, alongside targeted opportunities including keynote lectures, the tenth anniversary reception, coffee breaks, student scholarships and presentation awards.</p>
                 <p>To request the partnership prospectus, please write to <a href="mailto:cssusne@gmail.com">cssusne@gmail.com</a>.</p>
             </div>
